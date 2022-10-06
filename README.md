@@ -18,7 +18,7 @@ curl "http://127.0.0.1:5000/1/1000.0/put"
 ```
 curl "http://127.0.0.1:5000/1/600.0/withdraw"
 ```
-3. Try withdraw another 600.0 credits from the same client
+3. Try to withdraw another 600.0 credits from the same client
 ```
 curl "http://127.0.0.1:5000/1/600.0/withdraw"
 ```
