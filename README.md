@@ -37,7 +37,7 @@ SELECT * FROM history;
 ```
 ![image](https://user-images.githubusercontent.com/5135143/194402451-1ee2289c-3f26-4992-955a-b37c68e52602.png)
 
-You see two successfull transactions and one cancelled.
+There are two successfull transactions and one cancelled.
 
 3. Look at the __accounts__ table
 ```
@@ -45,4 +45,4 @@ SELECT * FROM accounts;
 ````
 ![image](https://user-images.githubusercontent.com/5135143/194402732-ed5047e8-80e0-499d-ac5c-c50fb1588850.png)
 
-You see 400 credits on the account of a client with ID=1.
+There are 400 credits on the account of a client with ID=1.
