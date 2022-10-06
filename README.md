@@ -36,6 +36,7 @@ psql postgres://postgres:pg@localhost:5432/accounts
 SELECT * FROM history;
 ```
 ![image](https://user-images.githubusercontent.com/5135143/194402451-1ee2289c-3f26-4992-955a-b37c68e52602.png)
+
 You see two successfull transactions and one cancelled.
 
 3. Look at the __accounts__ table
