@@ -10,15 +10,15 @@ Wait initialization. When it's done you will see a message " __* Running on http
 ## Test a server with a Curl from container CLI.
 Curl requests will return you a transaction ID.
 
-1. Put 1000.0 on to a clients account with id 1
+1. Put 1000.0 credits on to a clients account with id 1
 ```
 curl "http://127.0.0.1:5000/1/1000.0/put"
 ```
-2. Withdraw 600.0 from the same client
+2. Withdraw 600.0 credits from the same client
 ```
 curl "http://127.0.0.1:5000/1/600.0/withdraw"
 ```
-3. Try withdraw another 600.0 from the same client
+3. Try withdraw another 600.0 credits from the same client
 ```
 curl "http://127.0.0.1:5000/1/600.0/withdraw"
 ```
