@@ -1,0 +1,4 @@
+FROM postgres:latest
+ENV POSTGRES_PASSWORD=pg
+ENV POSTGRES_USER=postgres
+# ENV POSTGRES_DB=accounts

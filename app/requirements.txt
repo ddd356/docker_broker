@@ -1,0 +1,4 @@
+uuid6
+Flask
+psycopg2
+requests

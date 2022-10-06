@@ -1,0 +1,15 @@
+services:
+  db:
+    build: ./database/
+    ports:
+        - 5432:5432
+        
+  app :
+    build: ./app/
+ #   network_mode: host
+    links:
+        - "db"
+    depends_on:
+        - "db"
+#    ports:
+#        - 5000:5000
