@@ -10,7 +10,7 @@ Wait initialization. When it's done you will see a message " __* Running on http
 ## Test a server with a Curl from container CLI.
 Curl requests will return you a transaction ID.
 
-1. Put 1000.0 on to a client with id 1
+1. Put 1000.0 on to a clients account with id 1
 ```
 curl "http://127.0.0.1:5000/1/1000.0/put"
 ```
