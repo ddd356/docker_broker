@@ -24,7 +24,7 @@ curl "http://127.0.0.1:5000/1/600.0/withdraw"
 ```
 The last request will be cancelled because of low credits.
 
-## Look a result at Postgre database
+## Look at result in a Postgre database
 Use db's container CLI.
 
 1. Connect to the database
