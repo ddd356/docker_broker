@@ -8,6 +8,7 @@ import threading
 import enum
 import migrate
 import my_test
+import collections
 
 import settings
 
@@ -17,9 +18,14 @@ class Operation(enum.Enum):
 
 DSN = 'dbname={} user={} password={} host={}'.format(settings.DB_NAME, settings.DB_USER, settings.DB_PASSWORD, settings.DB_HOST)
 # Q: dict[int, queue.Queue] = {} # Queues
-Q = {} # Queues
+
 app = Flask(__name__)
 lock = threading.Lock()
+Q = collections.defaultdict(queue.Queue)
+
+def add_operation_to_Q(transaction_id, client_id, sum, operation):
+    with lock:
+        Q[client_id].put(Command(client_id, sum, transaction_id, operation))
 
 class Command():
     def __init__(self, client_id, sum, transaction_id, operation):
@@ -54,14 +60,6 @@ def server(client_id, sum, op):
         return f'{transaction_id}'
     except:
         return "Error: something goes wrong"
-
-
-def add_operation_to_Q(transaction_id, client_id, sum, operation):
-    with lock:
-        if not (client_id in Q):
-            Q[client_id] = queue.Queue()
-
-    Q[client_id].put(Command(client_id, sum, transaction_id, operation))
 
 def main_loop():
     while True:
