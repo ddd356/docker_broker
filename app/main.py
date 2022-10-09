@@ -57,8 +57,8 @@ def server(client_id, sum, op):
 
 
 def add_operation_to_Q(transaction_id, client_id, sum, operation):
-    if not (client_id in Q):
-        with lock:
+    with lock:
+        if not (client_id in Q):
             Q[client_id] = queue.Queue()
 
     Q[client_id].put(Command(client_id, sum, transaction_id, operation))
