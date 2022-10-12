@@ -46,7 +46,7 @@ def server(client_id, sum, op):
     elif op == "withdraw":
         operation = Operation.WITHDRAW
     else:
-        return "Wrong operation type: {}. Must be: put | withdraw.".format(op)
+        return f'Wrong operation type: {op}. Must be: put | withdraw.'
 
     try:
         with psycopg2.connect(DSN) as conn:
